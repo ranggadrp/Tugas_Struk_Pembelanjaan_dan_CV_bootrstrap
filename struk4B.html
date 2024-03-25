@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Struk Pembelanjaan</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .receipt {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .receipt-header img {
+    width: 150px;
+    height: auto;
+  }
+  .receipt-info {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .receipt-info p {
+    margin: 5px 0;
+  }
+  .receipt-table th,
+  .receipt-table td {
+    border: none;
+    padding: 8px;
+  }
+  .receipt-table th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+  }
+  .receipt-total {
+    margin-top: 20px;
+  }
+  .receipt-total p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="receipt">
+        <div class="receipt-header">
+          <img src="pngwing.com (8).png" alt="Indomaret Logo">
+          <h3>Struk Pembelanjaan</h3>
+        </div>
+        <div class="receipt-info">
+          <p>Tanggal: 18 Maret 2024</p>
+          <p>Kasir: Abraham Lincon</p>
+          <p>No. Struk: 99999999</p>
+        </div>
+        <table class="table receipt-table">
+          <thead>
+            <tr>
+              <th>Barang</th>
+              <th>Harga</th>
+              <th>Jumlah</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Beras</td>
+              <td>Rp 50.000</td>
+              <td>2</td>
+              <td>Rp 100.000</td>
+            </tr>
+            <tr>
+              <td>Minyak Goreng</td>
+              <td>Rp 20.000</td>
+              <td>1</td>
+              <td>Rp 20.000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="receipt-total">
+          <p>Total Belanja: Rp 120.000</p>
+          <p>Tunai: Rp 150.000</p>
+          <p>Kembali: Rp 30.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
