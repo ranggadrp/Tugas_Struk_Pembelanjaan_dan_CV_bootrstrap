@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("skyscraper-silhouette-against-vibrant-city-lights-dusk-generative-ai.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  backdrop-filter: blur(10px); /* Efek blur pada background */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="button"] {
+  width: calc(100% - 10px);
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+#captchaContainer {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#captchaCanvas {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+#refreshCaptcha {
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #ccc;
+  color: #333;
+  cursor: pointer;
+}
+
+#refreshCaptcha:hover {
+  background-color: #bbb;
+}
