@@ -7,17 +7,33 @@
     <link rel="stylesheet" href="fun.css" />
   </head>
   <body>
-    <div class="login-container">
+    <div class="container">
       <h2>Login Form</h2>
       <form id="loginForm">
-        <input type="text" id="Email" placeholder="Email" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <div id="captchaContainer"></div>
-        <button type="submit">Login</button>
+        <div class="form-group">
+          <label for="inputEmail">Email:</label>
+          <input type="email" class="form-control" id="inputEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputCaptcha">Captcha: <span id="captcha"></span></label>
+          <input type="text" class="form-control" id="inputCaptcha" required />
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnLogin">
+          Login
+        </button>
       </form>
-      <div id="message"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="fun.js"></script>
   </body>
 </html>

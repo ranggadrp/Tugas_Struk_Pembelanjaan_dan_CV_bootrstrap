@@ -1,58 +1,31 @@
-function generateCaptcha() {
-  var alphaNumeric =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  var captcha = "";
-  for (var i = 0; i < 6; i++) {
-    captcha += alphaNumeric.charAt(
-      Math.floor(Math.random() * alphaNumeric.length)
-    );
-  }
-  return captcha;
-}
-
 $(document).ready(function () {
-  var captchaText = generateCaptcha();
-  $("#captchaContainer").html(
-    '<input type="text" id="captchaInput" placeholder="Enter CAPTCHA" required>' +
-      '<canvas id="captchaCanvas" width="300" height="80"></canvas>' +
-      '<button type="button" id="refreshCaptcha">Refresh</button>'
-  );
+  var n1 = Math.round(Math.random() * 111);
+  var n2 = Math.round(Math.random() * -22);
+  var captcha = n1 + " + " + n2;
+  $("#captcha").text(captcha);
 
-  var canvas = document.getElementById("captchaCanvas");
-  var ctx = canvas.getContext("2d");
+  $("#btnLogin")
+    .button()
+    .click(function (e) {
+      e.preventDefault();
+      var userCaptcha = $("#inputCaptcha").val();
+      if (eval(captcha) == userCaptcha) {
+        var dbemail = "admin@gmail.com";
+        var dbpassword = "admin";
+        var email = $("#inputEmail").val();
+        var password = $("#inputPassword").val();
 
-  $("#refreshCaptcha").click(function () {
-    captchaText = generateCaptcha();
-    drawCaptcha(ctx, captchaText);
-  });
-
-  $("#loginForm").submit(function (event) {
-    event.preventDefault();
-    var Email = $("#Email").val();
-    var password = $("#password").val();
-    var enteredCaptcha = $("#captchaInput").val();
-    if (enteredCaptcha.toUpperCase() === captchaText.toUpperCase()) {
-      if (Email === "Admin@gmail.com" && password === "Admin") {
-        $("#message").html('<div class="success">Login success!</div>');
-        window.location.href = "CV_B4.html";
+        if (dbemail === email && dbpassword === password) {
+          alert("Login Success");
+          // Redirect to another page after 3 seconds
+          setTimeout(function () {
+            window.location.href = "CV_B4 copy.html";
+          }, 100); // 3000 milliseconds = 3 seconds
+        } else {
+          alert("Email atau password salah");
+        }
       } else {
-        $("#message").html(
-          '<div class="error">username atau password salah!</div>'
-        );
+        alert("Captcha salah");
       }
-    } else {
-      $("#message").html('<div class="error">CAPTCHA Salah!</div>');
-    }
-  });
-
-  drawCaptcha(ctx, captchaText);
+    });
 });
-
-function drawCaptcha(ctx, captchaText) {
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  ctx.font = "bold 40px Arial";
-  ctx.fillStyle = "#000000";
-  ctx.fillText(captchaText, 10, 50);
-}
