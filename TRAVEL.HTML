@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Agent</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        margin-bottom: 1rem;
+      }
+
+      main {
+        margin-bottom: 3rem;
+      }
+
+      .card-header {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .jumbotron {
+        background-image: url("314853-P9JQF3-555.jpg");
+        background-size: cover;
+        background-position: center;
+        color: black;
+      }
+
+      .jumbotron h1 {
+        font-size: 3rem;
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .service-card img {
+        width: 100%;
+        height: auto;
+      }
+
+      section {
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Travel Agent</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#packages">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-light ml-2" onclick="logout()">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="jumbotron text-center" data-aos="fade-in">
+      <div class="container">
+        <h1>Welcome to Travel Agent</h1>
+        <p>Your adventure starts here</p>
+      </div>
+    </div>
+
+    <main class="container">
+      <section id="about" class="my-4" data-aos="fade-up">
+        <div class="card">
+          <div class="card-header">
+            <h2>About Us</h2>
+          </div>
+          <div class="card-body">
+            <p>
+              Selamat datang di [Nama Agen Perjalanan Anda], mitra perjalanan
+              terpercaya Anda. Kami adalah agen perjalanan yang berdedikasi
+              untuk menyediakan layanan perjalanan yang komprehensif dan
+              berkualitas tinggi untuk semua kebutuhan Anda. Dengan pengalaman
+              bertahun-tahun di industri pariwisata, kami bangga dapat
+              menawarkan berbagai paket wisata yang dirancang khusus untuk
+              memberikan pengalaman tak terlupakan bagi setiap pelanggan.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="my-4" data-aos="fade-up">
+        <div class="card">
+          <div class="card-header">
+            <h2>Our Services</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card service-card"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <img
+                    src="vecteezy_flight-booking-application-on-mobile-phone-screen-business_7389648 (1).jpg"
+                    class="card-img-top"
+                    alt="Flight Bookings"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Flight Bookings</h5>
+                    <p class="card-text">
+                      Kami menawarkan penawaran terbaik untuk penerbangan ke
+                      tujuan favorit Anda, memastikan perjalanan yang nyaman dan
+                      terjangkau.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card service-card"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <img
+                    src="istockphoto-1448506100-612x612.jpg"
+                    class="card-img-top"
+                    alt="Hotel Reservations"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Hotel Reservations</h5>
+                    <p class="card-text">
+                      Pilih dari berbagai pilihan hotel yang sesuai dengan Anda
+                      preferensi dan anggaran. Kami membuat masa menginap Anda
+                      senyaman mungkin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card service-card"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <img
+                    src="travel-insurance-212831.jpg"
+                    class="card-img-top"
+                    alt="Travel Insurance"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Travel Insurance</h5>
+                    <p class="card-text">
+                      Bepergian dengan tenang karena Anda terlindungi dengan
+                      paket asuransi perjalanan komprehensif kami.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card service-card"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <img
+                    src="4218679.jpg"
+                    class="card-img-top"
+                    alt="Customized Travel Packages"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Customized Travel Packages</h5>
+                    <p class="card-text">
+                      Dapatkan pengalaman perjalanan yang dibuat khusus yang
+                      sesuai dengan Anda minat dan jadwal. Kami merencanakan
+                      setiap detail untuk Anda.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" class="my-4" data-aos="fade-up">
+        <div class="card">
+          <div class="card-header">
+            <h2>Travel Packages</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4" data-aos="fade-up" data-aos-delay="100">
+                  <img
+                    src="beautiful-outdoor-infinity-swimming-pool-with-coconut-palm-tree-around-beach-sea-ocean-sunrise-sunset-time.jpg"
+                    class="card-img-top"
+                    alt="Beach Paradise"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Beach Paradise</h5>
+                    <p class="card-text">
+                      Rasakan liburan pantai terbaik dengan eksklusif kami
+                      paket.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4" data-aos="fade-up" data-aos-delay="200">
+                  <img
+                    src="kalen-emsley-mgJSkgIo_JI-unsplash.jpg"
+                    class="card-img-top"
+                    alt="Mountain Adventure"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Mountain Adventure</h5>
+                    <p class="card-text">
+                      Mulailah petualangan gunung yang mengasyikkan bersama
+                      pemandu kami tours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4" data-aos="fade-up" data-aos-delay="300">
+                  <img
+                    src="DSC_2977-1920x1282.jpg"
+                    class="card-img-top"
+                    alt="City Exploration"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">City Exploration</h5>
+                    <p class="card-text">
+                      Temukan keajaiban kota dengan paket eksplorasi kami.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="my-4" data-aos="fade-up">
+        <div class="card">
+          <div class="card-header">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Travel Agent. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+
+      function logout() {
+        alert("You have been logged out.");
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>
